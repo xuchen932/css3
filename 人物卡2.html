@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>人物卡</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrapper li {
+            width: 400px;
+            height: 100px;
+        }
+        .wrapper li span {
+            height: 100px;
+            line-height: 100px;
+            position: relative;
+            color: rgb(122, 172, 230);
+            text-align: center;
+            display: block;
+            z-index: 100;
+        }
+
+        .wrapper li div {
+            top: 0;
+            left: 0;
+            position: absolute;
+            opacity: 0;
+            height: 100px;
+            width: 100px;
+            transition: all 1s linear ;
+        }
+
+        .wrapper li:nth-of-type(1) div {
+            background-image: url(1.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper li:nth-of-type(2) div {
+            background-image: url(2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper li:nth-of-type(3) div {
+            background-image: url(3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        .wrapper li span:hover + div {
+            transform: translateX(300px);
+            opacity: 1;
+        }
+      
+    
+    </style>
+</head>
+<body>
+   
+    <ul class="wrapper">
+        <li>
+            <span>one</span>
+            <div></div>
+        </li>
+        <li>
+            <span>two</span>
+            <div></div>
+        </li>
+        <li>
+            <span>three</span>
+            <div></div>
+        </li>
+    </ul>
+
+    
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrapper li {
+            width: 400px;
+            margin-bottom: 2px;
+            height: 100px;
+        }
+        .wrapper li span {
+            background-color: rgba(123, 123, 123, .2);
+            position: relative;
+            display: block;
+            height: 100px;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            color: rgb(0, 141, 225);
+            z-index: 1000; /*这里注意一下*/
+        }
+        .wrapper li div {
+            top: 0;
+            left: 0;
+            position: absolute;
+            height: 300px;
+            width: 200px;
+            opacity: 0;
+            transition: all 1s linear 300ms;
+        }
+        .wrapper li:nth-of-type(1) div {
+            background: url(1.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper li:nth-of-type(2) div {
+            background: url(2.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper li:nth-of-type(3) div {
+            background: url(3.jpg) no-repeat;
+            background-size: 100% 100%;
+        }
+        .wrapper li span:hover + div{
+            opacity: 1; 
+            transform: translateX(200px);
+        }
+        
+    
+    
+    </style>
+</head>
+<body>
+    <ul class="wrapper">
+        <li>
+            <span>one</span>
+            <div></div>
+        </li>
+        <li>
+            <span>two</span>
+            <div></div>
+        </li>
+        <li>
+            <span>three</span>
+            <div></div>
+        </li>
+    </ul>
+    
+    <script>
+    
+    
+    </script>
+</body>
+</html>
